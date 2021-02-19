@@ -44,13 +44,13 @@
   <body class="text-center">
 
 <main class="form-signin">
-  <form>
+  <form action="/" method="post">
     <img class="mb-4" src="image/convopic.jpeg" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Sign up to my newsletter.</h1>
 
-    <input type="text" class="form-control top" placeholder="Your first name " required autofocus>
-    <input type="text" class="form-control middle" placeholder="Your last name " required autofocus>
-    <input type="email" class="form-control bottom" placeholder="Email address" required autofocus>
+    <input type="text" name="fname" class="form-control top" placeholder="Your first name " required autofocus>
+    <input type="text" name="lname" class="form-control middle" placeholder="Your last name " required autofocus>
+    <input type="email" name="email" class="form-control bottom" placeholder="Email address" required autofocus>
 
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign me up</button>
     <p class="mt-5 mb-3 text-muted">&copy; Nob's newsletter 2021</p>
