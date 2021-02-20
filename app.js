@@ -1,3 +1,5 @@
+var key = require('./keys.js');
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
@@ -30,10 +32,10 @@ const data = {
 };
 
 const jsonData = JSON.stringify(data);
-const url = 'https://us1.api.mailchimp.com/3.0/lists/d2f55381ee';
+const url = 'https://us1.api.mailchimp.com/3.0/lists/'+ key.unique_id_for_audience_newsletter;
 const options = {
   method : "post",
-  auth: "nob:906903ceff56eef301758cfdcb75c998-us1"
+  auth: "nob:"+ key.API_KEY
 }
 const request = https.request(url, options, function (response) {
 
@@ -59,7 +61,3 @@ app.post("/failure", function (req, res) {
 app.listen(process.env.PORT || 3000,function() {
   console.log("running on 3000");
 });
-
-//apikey = 906903ceff56eef301758cfdcb75c998-us1;
-
-//unique id for audience newsletter : d2f55381ee
