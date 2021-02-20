@@ -35,7 +35,7 @@ const jsonData = JSON.stringify(data);
 const url = 'https://us1.api.mailchimp.com/3.0/lists/'+ key.unique_id_for_audience_newsletter;
 const options = {
   method : "post",
-  auth: "nob:"+ key.API_KEY
+  auth: "nob:"+ key.API_KEY,
 }
 const request = https.request(url, options, function (response) {
 
